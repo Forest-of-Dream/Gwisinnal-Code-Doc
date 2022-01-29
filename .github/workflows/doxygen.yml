@@ -28,7 +28,7 @@ jobs:
         with:
           repository: Forest-of-Dream/Gwisinnal
           path: project
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN }}
 
       - run: mv Doxyfile project/Source/Gwisinnal/
           
@@ -41,4 +41,4 @@ jobs:
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: project/Source/Gwisinnal/html
+          publish_dir: project/Source/Gwisinnal/g_docs/html
