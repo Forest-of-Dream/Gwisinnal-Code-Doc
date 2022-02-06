@@ -28,6 +28,8 @@ jobs:
         with:
           repository: Forest-of-Dream/Gwisinnal
           path: project
+          ref: dev
+          
           token: ${{ secrets.TOKEN }}
 
       - run: mv Doxyfile project/Source/Gwisinnal/
