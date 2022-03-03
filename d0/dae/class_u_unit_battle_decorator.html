@@ -92,15 +92,19 @@ $(document).ready(function(){initNavTree('d0/dae/class_u_unit_battle_decorator.h
 Inheritance diagram for UUnitBattleDecorator:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="../../d0/dae/class_u_unit_battle_decorator.png" alt=""/>
- </div></div>
+  <img src="../../d0/dae/class_u_unit_battle_decorator.png" usemap="#UUnitBattleDecorator_map" alt=""/>
+  <map id="UUnitBattleDecorator_map" name="UUnitBattleDecorator_map">
+<area href="../../d6/d36/class_u_cmd_battle_decorator.html" alt="UCmdBattleDecorator" shape="rect" coords="0,112,133,136"/>
+<area href="../../d1/dc9/class_u_cnt_buff_decorator.html" alt="UCntBuffDecorator" shape="rect" coords="0,168,133,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9ecedbf9c83a6e38a6062a5db936dce7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dae/class_u_unit_battle_decorator.html#a9ecedbf9c83a6e38a6062a5db936dce7">OnAttack</a> (<a class="el" href="../../d8/d58/class_a_unit.html">AUnit</a> *target, const int &amp;damage)</td></tr>
-<tr class="separator:a9ecedbf9c83a6e38a6062a5db936dce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f3b6f70befb0b7ba11e9806677b15e2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dae/class_u_unit_battle_decorator.html#a6f3b6f70befb0b7ba11e9806677b15e2">OnHit</a> (const int &amp;damage)</td></tr>
-<tr class="separator:a6f3b6f70befb0b7ba11e9806677b15e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7befc76f92e361ab8c82684a721932"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dae/class_u_unit_battle_decorator.html#aad7befc76f92e361ab8c82684a721932">OnAttack</a> (<a class="el" href="../../d8/d58/class_a_unit.html">AUnit</a> *target, const int &amp;damage)</td></tr>
+<tr class="separator:aad7befc76f92e361ab8c82684a721932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e37b501eeaf96c7a804879c908a179"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dae/class_u_unit_battle_decorator.html#a31e37b501eeaf96c7a804879c908a179">OnHit</a> (const int &amp;damage)</td></tr>
+<tr class="separator:a31e37b501eeaf96c7a804879c908a179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9885580aa31e4875d8bb17ba9bd333aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/dae/class_u_unit_battle_decorator.html">UUnitBattleDecorator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dae/class_u_unit_battle_decorator.html#a9885580aa31e4875d8bb17ba9bd333aa">GetParrent</a> ()</td></tr>
 <tr class="separator:a9885580aa31e4875d8bb17ba9bd333aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8210ec2d3930e1e218f8181d60ffacce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dae/class_u_unit_battle_decorator.html#a8210ec2d3930e1e218f8181d60ffacce">SetParrent</a> (<a class="el" href="../../d0/dae/class_u_unit_battle_decorator.html">UUnitBattleDecorator</a> *parrent)</td></tr>
@@ -186,20 +190,20 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>{</div>
-<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">if</span>(child)</div>
-<div class="line"><span class="lineno">   42</span>    {</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span>(mChild)</div>
-<div class="line"><span class="lineno">   44</span>            mChild-&gt;SetParrent(<span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   45</span> </div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span>(child-&gt;GetParrent())</div>
-<div class="line"><span class="lineno">   47</span>            child-&gt;Detach();</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>        child-&gt;SetParrent(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   50</span>        mChild = child;</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-<div class="line"><span class="lineno">   52</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html#l00053">53</a> of file <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>{</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">if</span>(child)</div>
+<div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span>(mChild)</div>
+<div class="line"><span class="lineno">   58</span>            mChild-&gt;SetParrent(<span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span>(child-&gt;GetParrent())</div>
+<div class="line"><span class="lineno">   61</span>            child-&gt;Detach();</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>        child-&gt;SetParrent(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   64</span>        mChild = child;</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="line"><span class="lineno">   66</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -219,20 +223,20 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>{</div>
-<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">if</span>(parrent)</div>
-<div class="line"><span class="lineno">   18</span>    {</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span>(mParrent)</div>
-<div class="line"><span class="lineno">   20</span>            mParrent-&gt;SetChild(<span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   21</span> </div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span>(parrent-&gt;GetChild())</div>
-<div class="line"><span class="lineno">   23</span>            parrent-&gt;DetachChild();</div>
-<div class="line"><span class="lineno">   24</span> </div>
-<div class="line"><span class="lineno">   25</span>        parrent-&gt;SetChild(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   26</span>        mParrent = parrent;</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="line"><span class="lineno">   28</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html#l00029">29</a> of file <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{</div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">if</span>(parrent)</div>
+<div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span>(mParrent)</div>
+<div class="line"><span class="lineno">   34</span>            mParrent-&gt;SetChild(<span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span>(parrent-&gt;GetChild())</div>
+<div class="line"><span class="lineno">   37</span>            parrent-&gt;DetachChild();</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>        parrent-&gt;SetChild(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   40</span>        mParrent = parrent;</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="line"><span class="lineno">   42</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -251,14 +255,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html#l00030">30</a> of file <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>{</div>
-<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">if</span>(mParrent)</div>
-<div class="line"><span class="lineno">   33</span>    {</div>
-<div class="line"><span class="lineno">   34</span>        mParrent-&gt;SetChild(<span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   35</span>        mParrent = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="line"><span class="lineno">   37</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html#l00044">44</a> of file <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">if</span>(mParrent)</div>
+<div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        mParrent-&gt;SetChild(<span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   49</span>        mParrent = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="line"><span class="lineno">   51</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -277,14 +281,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html#l00054">54</a> of file <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>{</div>
-<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">if</span>(mChild)</div>
-<div class="line"><span class="lineno">   57</span>    {</div>
-<div class="line"><span class="lineno">   58</span>        mChild-&gt;SetParrent(<span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   59</span>        mChild = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-<div class="line"><span class="lineno">   61</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html#l00068">68</a> of file <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>{</div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">if</span>(mChild)</div>
+<div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        mChild-&gt;SetParrent(<span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   73</span>        mChild = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="line"><span class="lineno">   75</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -372,8 +376,8 @@ Public Member Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a9ecedbf9c83a6e38a6062a5db936dce7" name="a9ecedbf9c83a6e38a6062a5db936dce7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ecedbf9c83a6e38a6062a5db936dce7">&#9670;&nbsp;</a></span>OnAttack()</h2>
+<a id="aad7befc76f92e361ab8c82684a721932" name="aad7befc76f92e361ab8c82684a721932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7befc76f92e361ab8c82684a721932">&#9670;&nbsp;</a></span>OnAttack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,7 +386,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void UUnitBattleDecorator::OnAttack </td>
+          <td class="memname">void UUnitBattleDecorator::OnAttack </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d8/d58/class_a_unit.html">AUnit</a> *&#160;</td>
           <td class="paramname"><em>target</em>, </td>
@@ -401,18 +405,21 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/dfc/_unit_battle_decorator_8h_source.html#l00020">20</a> of file <a class="el" href="../../dc/dfc/_unit_battle_decorator_8h_source.html">UnitBattleDecorator.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{</div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">if</span>(mChild)</div>
+<div class="line"><span class="lineno">   18</span>        mChild-&gt;OnAttack(target,damage);</div>
+<div class="line"><span class="lineno">   19</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a6f3b6f70befb0b7ba11e9806677b15e2" name="a6f3b6f70befb0b7ba11e9806677b15e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f3b6f70befb0b7ba11e9806677b15e2">&#9670;&nbsp;</a></span>OnHit()</h2>
+<a id="a31e37b501eeaf96c7a804879c908a179" name="a31e37b501eeaf96c7a804879c908a179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e37b501eeaf96c7a804879c908a179">&#9670;&nbsp;</a></span>OnHit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -421,7 +428,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void UUnitBattleDecorator::OnHit </td>
+          <td class="memname">void UUnitBattleDecorator::OnHit </td>
           <td>(</td>
           <td class="paramtype">const int &amp;&#160;</td>
           <td class="paramname"><em>damage</em></td><td>)</td>
@@ -430,13 +437,16 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/dfc/_unit_battle_decorator_8h_source.html#l00023">23</a> of file <a class="el" href="../../dc/dfc/_unit_battle_decorator_8h_source.html">UnitBattleDecorator.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>{</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">if</span>(mChild)</div>
+<div class="line"><span class="lineno">   24</span>        mChild-&gt;OnHit(damage);</div>
+<div class="line"><span class="lineno">   25</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -528,8 +538,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Public/System/UnitSystem/<a class="el" href="../../dc/dfc/_unit_battle_decorator_8h_source.html">UnitBattleDecorator.h</a></li>
-<li>Private/System/UnitSystem/<a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a></li>
+<li>Public/System/UnitSystem/BattleDecorator/<a class="el" href="../../dc/dfc/_unit_battle_decorator_8h_source.html">UnitBattleDecorator.h</a></li>
+<li>Private/System/UnitSystem/BattleDecorator/<a class="el" href="../../d6/d72/_unit_battle_decorator_8cpp_source.html">UnitBattleDecorator.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -537,7 +547,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d0/dae/class_u_unit_battle_decorator.html">UUnitBattleDecorator</a></li>
-    <li class="footer">Generated on Wed Mar 2 2022 01:12:32 for Gwisinnal by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Thu Mar 3 2022 01:12:39 for Gwisinnal by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

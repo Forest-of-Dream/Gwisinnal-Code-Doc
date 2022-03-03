@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('d1/d59/class_u_unit_f_s_m.html','../..
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="../../d1/dd3/class_u_unit_f_s_m-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">UUnitFSM Class Reference</div></div>
 </div><!--header-->
@@ -115,10 +116,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a890396c6b035cd97e9dee220a7b8e0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf45a385a4b8656d9d5a1e8f84ed4b4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d59/class_u_unit_f_s_m.html#abf45a385a4b8656d9d5a1e8f84ed4b4a">Execute</a> ()</td></tr>
 <tr class="separator:abf45a385a4b8656d9d5a1e8f84ed4b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae145ac6a70ebc12e685736728c792b6b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d59/class_u_unit_f_s_m.html#ae145ac6a70ebc12e685736728c792b6b">TickComponent</a> (float DeltaTime, ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override</td></tr>
+<tr class="separator:ae145ac6a70ebc12e685736728c792b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4da3d66012049f84f6f36ad723b455b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d59/class_u_unit_f_s_m.html#a4da3d66012049f84f6f36ad723b455b3">BeginPlay</a> () override</td></tr>
+<tr class="separator:a4da3d66012049f84f6f36ad723b455b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html#l00027">27</a> of file <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html">UnitFSM.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html#l00028">28</a> of file <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html">UnitFSM.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa405335c680abef7b0b7dcf61b22909c" name="aa405335c680abef7b0b7dcf61b22909c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa405335c680abef7b0b7dcf61b22909c">&#9670;&nbsp;</a></span>UUnitFSM()</h2>
@@ -137,7 +145,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00006">6</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    7</span>{</div>
-<div class="line"><span class="lineno">    8</span>}</div>
+<div class="line"><span class="lineno">    8</span>        PrimaryComponentTick.bCanEverTick = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">    9</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -156,9 +165,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00010">10</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>{</div>
-<div class="line"><span class="lineno">   12</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00011">11</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{</div>
+<div class="line"><span class="lineno">   13</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -195,14 +204,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00038">38</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>{</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span>(mConditions.Contains(condition))</div>
-<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   42</span>        </div>
-<div class="line"><span class="lineno">   43</span>        mConditions.Add(condition);</div>
-<div class="line"><span class="lineno">   44</span>        mFSM.AddCondition(before,after,condition);</div>
-<div class="line"><span class="lineno">   45</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00047">47</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>{</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span>(mConditions.Contains(condition))</div>
+<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   51</span>        </div>
+<div class="line"><span class="lineno">   52</span>        mConditions.Add(condition);</div>
+<div class="line"><span class="lineno">   53</span>        mFSM.AddCondition(before,after,condition);</div>
+<div class="line"><span class="lineno">   54</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -232,13 +241,46 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00014">14</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span>(mStates.Contains(state))</div>
-<div class="line"><span class="lineno">   17</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   18</span>        </div>
-<div class="line"><span class="lineno">   19</span>        mStates.Add(state);</div>
-<div class="line"><span class="lineno">   20</span>        mFSM.Add(<span class="keywordtype">id</span>,state);</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00023">23</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span>(mStates.Contains(state))</div>
+<div class="line"><span class="lineno">   26</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   27</span>        </div>
+<div class="line"><span class="lineno">   28</span>        mStates.Add(state);</div>
+<div class="line"><span class="lineno">   29</span>        mFSM.Add(<span class="keywordtype">id</span>,state);</div>
+<div class="line"><span class="lineno">   30</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4da3d66012049f84f6f36ad723b455b3" name="a4da3d66012049f84f6f36ad723b455b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4da3d66012049f84f6f36ad723b455b3">&#9670;&nbsp;</a></span>BeginPlay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UUnitFSM::BeginPlay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{</div>
+<div class="line"><span class="lineno">   17</span>        Super::BeginPlay();</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>        <span class="comment">// ...</span></div>
+<div class="line"><span class="lineno">   20</span>        </div>
 <div class="line"><span class="lineno">   21</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -259,10 +301,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00033">33</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>{</div>
-<div class="line"><span class="lineno">   35</span>        mFSM.Change(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   36</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00042">42</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{</div>
+<div class="line"><span class="lineno">   44</span>        mFSM.Change(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   45</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,10 +323,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00053">53</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>{</div>
-<div class="line"><span class="lineno">   55</span>        mFSM.Execute();</div>
-<div class="line"><span class="lineno">   56</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00062">62</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>{</div>
+<div class="line"><span class="lineno">   64</span>        mFSM.Execute();</div>
+<div class="line"><span class="lineno">   65</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -311,8 +353,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html#l00039">39</a> of file <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html">UnitFSM.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>{<span class="keywordflow">return</span> mFSM.CurrentId();}</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html#l00040">40</a> of file <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html">UnitFSM.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>{<span class="keywordflow">return</span> mFSM.CurrentId();}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -339,8 +381,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html#l00035">35</a> of file <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html">UnitFSM.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>{<span class="keywordflow">return</span> mFSM.GetSubject();}</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html#l00036">36</a> of file <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html">UnitFSM.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>{<span class="keywordflow">return</span> mFSM.GetSubject();}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -370,11 +412,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00047">47</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>{</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keyword">auto</span> condition = mFSM.RemoveCondition(before,after);</div>
-<div class="line"><span class="lineno">   50</span>        mConditions.Remove(condition);</div>
-<div class="line"><span class="lineno">   51</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00056">56</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keyword">auto</span> condition = mFSM.RemoveCondition(before,after);</div>
+<div class="line"><span class="lineno">   59</span>        mConditions.Remove(condition);</div>
+<div class="line"><span class="lineno">   60</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -394,16 +436,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00023">23</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>{</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keyword">auto</span> state = mFSM.Remove(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span>(state == <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno">   27</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   28</span> </div>
-<div class="line"><span class="lineno">   29</span>        <span class="keyword">auto</span> unitState = (<a class="code hl_class" href="../../df/d7b/class_u_unit_state.html">UUnitState</a>*)state; </div>
-<div class="line"><span class="lineno">   30</span>        mStates.Remove(unitState);</div>
-<div class="line"><span class="lineno">   31</span>}</div>
-<div class="ttc" id="aclass_u_unit_state_html"><div class="ttname"><a href="../../df/d7b/class_u_unit_state.html">UUnitState</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d67/_unit_f_s_m_8h_source.html#l00018">UnitFSM.h:19</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00032">32</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>{</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keyword">auto</span> state = mFSM.Remove(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span>(state == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>        <span class="keyword">auto</span> unitState = (<a class="code hl_class" href="../../df/d7b/class_u_unit_state.html">UUnitState</a>*)state; </div>
+<div class="line"><span class="lineno">   39</span>        mStates.Remove(unitState);</div>
+<div class="line"><span class="lineno">   40</span>}</div>
+<div class="ttc" id="aclass_u_unit_state_html"><div class="ttname"><a href="../../df/d7b/class_u_unit_state.html">UUnitState</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d67/_unit_f_s_m_8h_source.html#l00019">UnitFSM.h:20</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -431,8 +473,55 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html#l00037">37</a> of file <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html">UnitFSM.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>{mFSM.SetSubject(unit);}</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html#l00038">38</a> of file <a class="el" href="../../d1/d67/_unit_f_s_m_8h_source.html">UnitFSM.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>{mFSM.SetSubject(unit);}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae145ac6a70ebc12e685736728c792b6b" name="ae145ac6a70ebc12e685736728c792b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae145ac6a70ebc12e685736728c792b6b">&#9670;&nbsp;</a></span>TickComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UUnitFSM::TickComponent </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>DeltaTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ELevelTick&#160;</td>
+          <td class="paramname"><em>TickType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FActorComponentTickFunction *&#160;</td>
+          <td class="paramname"><em>ThisTickFunction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html#l00067">67</a> of file <a class="el" href="../../d0/de7/_unit_f_s_m_8cpp_source.html">UnitFSM.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>{</div>
+<div class="line"><span class="lineno">   69</span>        Execute();</div>
+<div class="line"><span class="lineno">   70</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -446,7 +535,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d59/class_u_unit_f_s_m.html">UUnitFSM</a></li>
-    <li class="footer">Generated on Wed Mar 2 2022 01:12:32 for Gwisinnal by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Thu Mar 3 2022 01:12:39 for Gwisinnal by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

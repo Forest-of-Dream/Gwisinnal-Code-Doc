@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['moveforward_0',['MoveForward',['../d1/d68/class_a_gwisinnal_character.html#ac9016590d8c0a903d808b6edfe9efa93',1,'AGwisinnalCharacter']]],
-  ['moveright_1',['MoveRight',['../d1/d68/class_a_gwisinnal_character.html#ab8056e01bb94b52aaa398cd6a1fac6db',1,'AGwisinnalCharacter']]]
+  ['init_0',['Init',['../de/d03/class_a_stage_level_object.html#a31433287c0f8ae689c65f3670ac5e060',1,'AStageLevelObject']]]
 ];

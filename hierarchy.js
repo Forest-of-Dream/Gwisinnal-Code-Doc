@@ -1,7 +1,9 @@
 var hierarchy =
 [
     [ "AActor", null, [
-      [ "AParticleSystemMgr", "df/df9/class_a_particle_system_mgr.html", null ]
+      [ "AParticleSystemMgr", "df/df9/class_a_particle_system_mgr.html", null ],
+      [ "AStageLevelMgr", "d3/de1/class_a_stage_level_mgr.html", null ],
+      [ "AStageLevelObject", "de/d03/class_a_stage_level_object.html", null ]
     ] ],
     [ "ACharacter", null, [
       [ "AGwisinnalCharacter", "d1/d68/class_a_gwisinnal_character.html", null ],
@@ -27,9 +29,16 @@ var hierarchy =
       [ "UUnitStatus", "d8/db5/class_u_unit_status.html", null ]
     ] ],
     [ "UObject", null, [
+      [ "UBuff", "d3/d4b/class_u_buff.html", [
+        [ "UCountBuff", "d4/d94/class_u_count_buff.html", null ],
+        [ "URepeatBuff", "dc/d5c/class_u_repeat_buff.html", null ],
+        [ "UTimerBuff", "d0/d84/class_u_timer_buff.html", null ]
+      ] ],
       [ "UCommand", "dd/d40/class_u_command.html", [
+        [ "UAttackToTargetCommand", "da/de0/class_u_attack_to_target_command.html", null ],
         [ "UCompositCommand", "db/d7a/class_u_composit_command.html", null ],
-        [ "UConditionalCommand", "d3/df2/class_u_conditional_command.html", null ]
+        [ "UConditionalCommand", "d3/df2/class_u_conditional_command.html", null ],
+        [ "UTargetingCommand", "dd/dfa/class_u_targeting_command.html", null ]
       ] ],
       [ "UCondition", "d7/d4f/class_u_condition.html", [
         [ "UCompositCondition", "d0/d72/class_u_composit_condition.html", null ],
@@ -37,8 +46,14 @@ var hierarchy =
         [ "UVelocityContidion", "d2/d86/class_u_velocity_contidion.html", null ]
       ] ],
       [ "UParticlePoolClass", "d2/d4a/class_u_particle_pool_class.html", null ],
+      [ "USkillNode", "d4/d86/class_u_skill_node.html", null ],
       [ "UUnitBattleData", "dc/dd9/class_u_unit_battle_data.html", null ],
-      [ "UUnitBattleDecorator", "d0/dae/class_u_unit_battle_decorator.html", null ],
+      [ "UUnitBattleDecorator", "d0/dae/class_u_unit_battle_decorator.html", [
+        [ "UCmdBattleDecorator", "d6/d36/class_u_cmd_battle_decorator.html", [
+          [ "UCntBuffDecorator", "d1/dc9/class_u_cnt_buff_decorator.html", null ]
+        ] ]
+      ] ],
+      [ "UUnitProxy", "d8/d1e/class_u_unit_proxy.html", null ],
       [ "UUnitState", "df/d7b/class_u_unit_state.html", null ]
     ] ]
 ];
