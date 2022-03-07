@@ -36,9 +36,13 @@ var hierarchy =
       ] ],
       [ "UCommand", "dd/d40/class_u_command.html", [
         [ "UAttackToTargetCommand", "da/de0/class_u_attack_to_target_command.html", null ],
+        [ "UBuffCommand", "dc/dcf/class_u_buff_command.html", null ],
         [ "UCompositCommand", "db/d7a/class_u_composit_command.html", null ],
         [ "UConditionalCommand", "d3/df2/class_u_conditional_command.html", null ],
-        [ "UTargetingCommand", "dd/dfa/class_u_targeting_command.html", null ]
+        [ "UHitCommand", "d2/dd8/class_u_hit_command.html", null ],
+        [ "UHpCommand", "da/d5c/class_u_hp_command.html", null ],
+        [ "UTargetingCommand", "dd/dfa/class_u_targeting_command.html", null ],
+        [ "UTimerCommand", "df/da3/class_u_timer_command.html", null ]
       ] ],
       [ "UCondition", "d7/d4f/class_u_condition.html", [
         [ "UCompositCondition", "d0/d72/class_u_composit_condition.html", null ],

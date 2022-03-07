@@ -157,21 +157,20 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d2e/_unit_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../d2/d2e/_unit_8cpp_source.html">Unit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>            :</div>
-<div class="line"><span class="lineno">   14</span>        mUnitId(0),</div>
-<div class="line"><span class="lineno">   15</span>        mAniSubState(0),</div>
-<div class="line"><span class="lineno">   16</span>        mUnitFSM(<span class="keyword">nullptr</span>),<span class="comment">//현재 블프로 붙힘</span></div>
-<div class="line"><span class="lineno">   17</span>        mBattleDecorator(<span class="keyword">nullptr</span>),<span class="comment">//현재 블프로 붙힘</span></div>
-<div class="line"><span class="lineno">   18</span>        mSkillController(<span class="keyword">nullptr</span>),<span class="comment">//현재 블프로 붙힘</span></div>
-<div class="line"><span class="lineno">   19</span>        mBuffController(<span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno">   20</span>{</div>
-<div class="line"><span class="lineno">   21</span>        <span class="comment">// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don&#39;t need it.</span></div>
-<div class="line"><span class="lineno">   22</span>        PrimaryActorTick.bCanEverTick = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>        mUnitStatus = CreateDefaultSubobject&lt;UUnitStatus&gt;(TEXT(<span class="stringliteral">&quot;UnitStatus&quot;</span>));</div>
-<div class="line"><span class="lineno">   25</span>        mUnitBattleData = CreateDefaultSubobject&lt;UUnitBattleData&gt;(TEXT(<span class="stringliteral">&quot;UnitBattleData&quot;</span>));</div>
-<div class="line"><span class="lineno">   26</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d2/d2e/_unit_8cpp_source.html#l00012">12</a> of file <a class="el" href="../../d2/d2e/_unit_8cpp_source.html">Unit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>            :</div>
+<div class="line"><span class="lineno">   13</span>        mUnitId(0),</div>
+<div class="line"><span class="lineno">   14</span>        mAniSubState(0),</div>
+<div class="line"><span class="lineno">   15</span>        mUnitFSM(<span class="keyword">nullptr</span>),<span class="comment">//현재 블프로 붙힘</span></div>
+<div class="line"><span class="lineno">   16</span>        mBattleDecorator(<span class="keyword">nullptr</span>),<span class="comment">//현재 블프로 붙힘</span></div>
+<div class="line"><span class="lineno">   17</span>        mSkillController(<span class="keyword">nullptr</span>),<span class="comment">//현재 블프로 붙힘</span></div>
+<div class="line"><span class="lineno">   18</span>        mBuffController(<span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   19</span>{</div>
+<div class="line"><span class="lineno">   20</span>        <span class="comment">// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don&#39;t need it.</span></div>
+<div class="line"><span class="lineno">   21</span>        PrimaryActorTick.bCanEverTick = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   22</span>        </div>
+<div class="line"><span class="lineno">   23</span>        mUnitStatus = CreateDefaultSubobject&lt;UUnitStatus&gt;(TEXT(<span class="stringliteral">&quot;UnitStatus&quot;</span>));</div>
+<div class="line"><span class="lineno">   24</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -199,10 +198,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d2e/_unit_8cpp_source.html#l00029">29</a> of file <a class="el" href="../../d2/d2e/_unit_8cpp_source.html">Unit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>{</div>
-<div class="line"><span class="lineno">   31</span>        Super::BeginPlay();</div>
-<div class="line"><span class="lineno">   32</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d2/d2e/_unit_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d2/d2e/_unit_8cpp_source.html">Unit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>{</div>
+<div class="line"><span class="lineno">   29</span>        mUnitBattleData =  NewObject&lt;UUnitBattleData&gt;();</div>
+<div class="line"><span class="lineno">   30</span>        Super::BeginPlay();</div>
+<div class="line"><span class="lineno">   31</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -221,13 +221,13 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d2e/_unit_8cpp_source.html#l00040">40</a> of file <a class="el" href="../../d2/d2e/_unit_8cpp_source.html">Unit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>{</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span>(mUnitFSM)</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">return</span> mUnitFSM-&gt;GetCurrentId();</div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   46</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d2/d2e/_unit_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../d2/d2e/_unit_8cpp_source.html">Unit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>{</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span>(mUnitFSM)</div>
+<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">return</span> mUnitFSM-&gt;GetCurrentId();</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   45</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -246,13 +246,13 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d2e/_unit_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../d2/d2e/_unit_8cpp_source.html">Unit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>{</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span>(mSkillController)</div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">return</span> mSkillController-&gt;GetCurrentNodeId();</div>
-<div class="line"><span class="lineno">   52</span> </div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   54</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d2/d2e/_unit_8cpp_source.html#l00047">47</a> of file <a class="el" href="../../d2/d2e/_unit_8cpp_source.html">Unit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>{</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span>(mSkillController)</div>
+<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">return</span> mSkillController-&gt;GetCurrentNodeId();</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   53</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -679,10 +679,10 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d2e/_unit_8cpp_source.html#l00035">35</a> of file <a class="el" href="../../d2/d2e/_unit_8cpp_source.html">Unit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>{</div>
-<div class="line"><span class="lineno">   37</span>        Super::Tick(DeltaTime);</div>
-<div class="line"><span class="lineno">   38</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d2/d2e/_unit_8cpp_source.html#l00034">34</a> of file <a class="el" href="../../d2/d2e/_unit_8cpp_source.html">Unit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>{</div>
+<div class="line"><span class="lineno">   36</span>        Super::Tick(DeltaTime);</div>
+<div class="line"><span class="lineno">   37</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -696,7 +696,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d8/d58/class_a_unit.html">AUnit</a></li>
-    <li class="footer">Generated on Sun Mar 6 2022 01:07:56 for Gwisinnal by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Mon Mar 7 2022 01:09:19 for Gwisinnal by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>
